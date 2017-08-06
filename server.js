@@ -62,7 +62,7 @@ function createHtml(data){
 }
 
 app.get('/article-one', function (req, res) {
-  res.sendFile(createHtml(ArticleOne));
+  res.send(createHtml(ArticleOne));
 });
 
 app.get('/article-two', function (req, res) {
