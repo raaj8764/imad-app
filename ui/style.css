@@ -10,7 +10,7 @@ body {
 
 .text-big {
     font-size: 150%;
-     background-color: red;
+     background-color: yellow;
 }
 
 .bold {
@@ -21,7 +21,7 @@ body {
     height: 300px;
 }
 .DIV{
-   background-color: red; 
+   background-color: yellow; 
 }
 .div{
    background-color: black; 
