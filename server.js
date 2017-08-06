@@ -43,7 +43,7 @@ function createHtml(data){
                         		<div class="container">
                             		<div>
                             			<a href="\">HOME</a>
-                            			<a href="\article-two>ARTICLE-TWO</a>
+                            			
                             		</div>
                             		   <hr/>
                             			    <h3> 
