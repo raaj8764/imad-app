@@ -41,7 +41,10 @@ function createHtml(data){
                         
                     <body>
                         		<div class="container">
-                            	
+                            		<div>
+                            			<a href="\">HOME</a>
+                            			
+                            		</div>
                             		   <hr/>
                             			    <h3> 
                             		    	${heading}
