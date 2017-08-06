@@ -9,7 +9,8 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-var ArticleOne={
+var Articles= {
+'article-one':{
     title:'Article-One | Revanth Rajendran',
     heading:'Article-one',
     date: '07-Aug-17',
@@ -22,7 +23,24 @@ var ArticleOne={
         				<p>
         					This is the content for my first article. This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.
         				</p>
-`};
+`},
+'article-two':{
+    title:'Article-Two | Revanth Rajendran',
+    heading:'Article-Two',
+    date: '10-Aug-17',
+    content:`	<p>
+        					This is the content for my second article. 
+        		</p>
+`},
+'article-three':{
+    title:'Article-Three | Revanth Rajendran',
+    heading:'Article-Three',
+    date: '20-Aug-17',
+    content:`	<p>
+        					This is the content for my third article. 
+        		</p>
+`},
+};
 
 function createHtml(data){
     var title=data.title;
@@ -62,8 +80,9 @@ function createHtml(data){
                     return HtmlTemplate;
 }
 
-app.get('/article-one', function (req, res) {
-  res.send(createHtml(ArticleOne));
+app.get('/:articleName', function (req, res) {
+    var articleNames=req.params.articleName;
+  res.send(createHtml(Articles[articleName]));
 });
 
 app.get('/article-two', function (req, res) {
