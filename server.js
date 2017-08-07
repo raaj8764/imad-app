@@ -55,7 +55,7 @@ function createHtml(data){
                     <body>
                         		<div class="container">
                             		<div>
-                            			<a href="/ui/index.html">HOME</a>
+                            			<a href="/">HOME</a>
 
                             		</div>
                             		   <hr/>
