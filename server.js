@@ -5,23 +5,18 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'index.html'))};
 
-var articleone
-{
-    title:'Article-One Revanth Rajendran',
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+});
+var articles={
+'article-one':{
+    title:'Article-Two | Revanth Rajendran',
     heading:'Article-one',
-    date: '07-Aug-17',
-    content:'<p>
-        					This is the content for my first article. This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.
-        				</p>
-        				<p>
-        				my first HTML program.my first HTML program.my first HTML program.my first HTML program.my first HTML program.my first HTML program.my first HTML program.my first HTML program.my first HTML program.my first HTML program.
-        				</p>
-        				<p>
-        					This is the content for my first article. This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.
-        				</p>
+    date: '10-Aug-17',
+    content:`	<p>
+        					This is the content for my first article. 
+        		</p>
 `},
 'article-two':{
     title:'Article-Two | Revanth Rajendran',
