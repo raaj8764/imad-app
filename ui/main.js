@@ -1,3 +1,3 @@
 console.log('Revanth!');
-var element=document.getElementByID('main-text');
+var element=document.getElementById('main-text');
 element.innerHTML='Hasura.IMAD.IO';
