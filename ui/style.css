@@ -35,4 +35,6 @@ body {
 	font-style: italic;
 	padding: 100px;
 	padding-right: 40px;
-	padding-left: 40px;}
+	padding-left: 40px;
+    background-color: blue;
+ }
