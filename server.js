@@ -41,6 +41,7 @@ function createHtml(data){
     var heading=data.heading;
     var date=data.date;
     var content=data.content;
+    var aref= '"\"';
     var HtmlTemplate=`
                     <html>
                     <head>
@@ -54,7 +55,7 @@ function createHtml(data){
                     <body>
                         		<div class="container">
                             		<div>
-                            			<a href="\">HOME</a>
+                            			<a href=${aref}>HOME</a>
 
                             		</div>
                             		   <hr/>
