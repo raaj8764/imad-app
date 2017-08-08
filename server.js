@@ -80,7 +80,9 @@ app.get('/:articleName', function (req, res) {
   res.send(createHtml(Articles[articleName]));
 });
 
-
+app.get('/ui/jstest.html', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'jstest.html'));
+});
 
 
 app.get('/ui/style.css', function (req, res) {
