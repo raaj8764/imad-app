@@ -12,7 +12,7 @@ button.onclick=function(){
             span.InnerHtml=counter.toString();
         }
     }
-    }
+    };
     request.open('GET','http://revanthr47.imad.hasura-app.io/counter',True);
     request.send(null);
 };
