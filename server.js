@@ -80,6 +80,11 @@ app.get('/:articleName', function (req, res) {
   res.send(createHtml(Articles[articleName]));
 });
 
+var counter=0;
+app.get('/counter',function(req,res){
+    counter=counter+1;
+    res.send(counter.tostring());
+});
 app.get('/ui/jstest.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'jstest.html'));
 });
