@@ -5,7 +5,7 @@ button.onclick=function(){
     
     
     counter=counter+1;
-    var span=document.getElementById('ClickNo');
+    var span=document.getElementById('ClickNO');
     span.innerHTML=counter.toString();
     
 }
