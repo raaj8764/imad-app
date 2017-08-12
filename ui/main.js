@@ -16,3 +16,19 @@ document.getElementById("button").onclick=function(){
     request.open('GET','http://revanthr47.imad.hasura-app.io/counter',true);
     request.send(null);
 };
+
+//submit name
+var nameinput=document.getElementById('name');
+var name=nameinput.value;
+var submit=document.getElementById('submit_btn');
+submit.onclick=fuction(){
+    //fetch data from server to browser
+    //render the name to webpage
+    var names=['name1','name2','name3','name4'];
+    var list='';
+    for(var i=0;i<names.lenght;i++){
+        list+='<li>'+ names[i] +'</li>';
+    }
+    var ul=document.getElementById('namelist');
+    ul.innerHTML=list;
+};
