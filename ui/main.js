@@ -9,7 +9,7 @@ document.getElementById("button").onclick=function(){
         if(request.status===200){
             var counter=request.responseText;
             var span=document.getElementById('count');
-            span.InnerHtml=counter.toString();
+            span.innerHtml=counter.toString();
         }
     }
     };
