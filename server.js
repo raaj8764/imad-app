@@ -17,8 +17,8 @@ var Articles={
     content:`	<p>
         					This is the content for my first article. 
         		</p>
-        	 <input type="text" id="name" placeholder="name"></input>
-          <input type="submit" value="commentt" id="submit_btn"></input>
+        	 <input type="text" id="name" placeholder="comment"></input>
+          <input type="submit" value="submit" id="submit_btn"></input>
 `},
 'article-two':{
     title:'Article-Two | Revanth Rajendran',
@@ -27,8 +27,8 @@ var Articles={
     content:`	<p>
         					This is the content for my second article. 
         		</p>
-        		 <input type="text" id="name" placeholder="name"></input>
-          <input type="submit" value="commentt" id="submit_btn"></input>
+        			 <input type="text" id="name" placeholder="comment"></input>
+          <input type="submit" value="submit" id="submit_btn"></input>
 `},
 'article-three':{
     title:'Article-Three | Revanth Rajendran',
@@ -37,8 +37,8 @@ var Articles={
     content:`	<p>
         					This is the content for my third article. 
         		</p>
-        		 <input type="text" id="name" placeholder="name"></input>
-          <input type="submit" value="commentt" id="submit_btn"></input>
+        			 <input type="text" id="name" placeholder="comment"></input>
+          <input type="submit" value="submit" id="submit_btn"></input>
 `},
 };
 
