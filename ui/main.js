@@ -22,7 +22,7 @@ document.getElementById("button").onclick=function(){
 
 //submit name
 var nameinput=document.getElementById('name');
-document.getElementById('name')=nameinput.value;
+name=nameinput.value;
 var submit=document.getElementById('submit_btn');
 submit.onclick=function(){
     //fetch data from server to browser
