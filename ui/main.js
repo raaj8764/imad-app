@@ -17,6 +17,8 @@ request.send(null);
 };
 
 
+var nameinput = document.getElementById('name');
+var name = nameinput.value;
 var submit = document.getElementById('submit_btn');
 submit.onclick = function (){
      var request = new XMLHttpRequest();
@@ -37,8 +39,6 @@ submit.onclick = function (){
 }
 };
 
-var nameinput = document.getElementById('name');
-var name = nameinput.value;
 request.open('GET', 'http://revanthr47.imad.hasura-app.io/submit-name?name=' + name, true);
 request.send(null);
 };
