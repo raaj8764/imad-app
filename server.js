@@ -11,12 +11,14 @@ app.get('/', function (req, res) {
 });
 var Articles={
 'article-one':{
-    title:'Article-Two | Revanth Rajendran',
+    title:'Article-One | Revanth Rajendran',
     heading:'Article-one',
     date: '10-Aug-17',
     content:`	<p>
         					This is the content for my first article. 
         		</p>
+        	 <input type="text" id="name" placeholder="name"></input>
+          <input type="submit" value="submit" id="submit_btn"></input>
 `},
 'article-two':{
     title:'Article-Two | Revanth Rajendran',
