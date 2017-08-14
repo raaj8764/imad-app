@@ -30,7 +30,8 @@ submit.onclick=function(){
    request.onreadystatechange = function(){
 
         //take some action
-        if(request.readyState === 4 && request.status === 200){
+        if(request.readyState === 4){
+       if(request.status === 200){
           var names=request.responseText;
           names=JSON.parse(names);
           var list='';
@@ -41,7 +42,7 @@ submit.onclick=function(){
         var ul=document.getElementById('namelist');
         ul.innerHTML=list;
         }
-
+        }
 };
     request.open('GET','http://revanthr47.imad.hasura-app.io/submitname?name=' +name, true);
     request.send(null);
