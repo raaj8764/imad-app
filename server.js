@@ -83,7 +83,7 @@ app.get('/counter',function (req, res) {
 });
 
 var names=[];
-app.get('/submitname/:name',function(req,res){
+app.get('/submitname',function(req,res){
     var name=req.query.name;
     
     names.push(name);
