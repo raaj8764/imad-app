@@ -96,6 +96,7 @@ app.get('/submitname',function(req,res){
     
     res.send(JSON.stringify(names));
 });
+
 app.get('/:articleName', function (req, res) {
     var articleName=req.params.articleName;
   res.send(createHtml(Articles[articleName]));
