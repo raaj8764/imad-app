@@ -1,7 +1,7 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
-var pool =require('pg').pool;
+var Pool =require('pg').Pool;
 var config ={
     host:"db.imad.hasura-app.io",
     user:"revanthr47",
@@ -88,7 +88,7 @@ function createHtml(data){
                     return HtmlTemplate;
 }
 
-var pool = new pool(config);
+var pool = new Pool(config);
 app.get("/test.db",function(req,res){
 //make a select request 
 //return a response with the results
