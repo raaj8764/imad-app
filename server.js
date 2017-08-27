@@ -121,7 +121,19 @@ pool.query('SELECT * FROM test', function (err,result){
 
 app.get('/article/:articleName', function (req, res) {
     var articleName=req.params.articleName;
-    res.send(createHtml(Articles[articleName]));
+    pool.query("SELECT * FROM articles WHERE title='" +req.params.articleName +"'", function(err,result){
+       if(err){
+           res.status(500).send(err.tostring());
+       }if(result.rows.lenght===0){
+           res.status(404).send('article not found');
+       }else{
+           var articleData=result.rows[0];
+            res.send(createHtml(Articles[articleName]));
+       }
+       
+        
+    });
+    
 });
 
 
