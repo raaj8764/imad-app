@@ -5,7 +5,7 @@ var Pool = require('pg').Pool;
 var crypto = require('crypto');
 var config = {
     user: 'revanthr47',
-    database: 'revanthr47',
+    database: 'revanth',
     host: 'db.imad.hasura-app.io',
     port: '5432',
     password: process.env.DB_PASSWORD
