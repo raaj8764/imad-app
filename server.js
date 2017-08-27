@@ -114,12 +114,12 @@ pool.query('SELECT * FROM test', function (err,result){
     if(err){
         res.status(500).send(err.toString());    
     }else{
-        res.send(JSON.stringify(result.rows));
+        res.send(JSON.stringify(result.rows[0]));
     }
 });
 });
 
-app.get('/:articleName', function (req, res) {
+app.get('/article/:articleName', function (req, res) {
     var articleName=req.params.articleName;
     res.send(createHtml(Articles[articleName]));
 });
