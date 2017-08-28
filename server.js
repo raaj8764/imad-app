@@ -19,7 +19,7 @@ app.get('/', function (req, res) {
 
 
 
-var Articles={
+var Article={
 'article-one':{
     title:'Article-One | Revanth Rajendran',
     heading:'Article-one',
