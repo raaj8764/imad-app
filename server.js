@@ -52,21 +52,21 @@ app.post('/create-user',function(req,res){
 });
 
 
-app.post('/login',function(req,res){
+app.post('/login', function (req, res){
    var username=req.body.username;
    var password=req.body.password;
    
-   pool.query('SELECT * FROM "user" WHERE username = $1', [username],function (err,result){
+   pool.query('SELECT * FROM "user" WHERE username = $1', [username],function (err, result) {
         if(err){
         res.status(500).send(err.toString());    
         }else{
-            if(result.rows.length===0){
+            if(result.rows.length === 0){
                 res.send(403).send('user/password incorrect');
             }else{
                 //match the password
                 
                 var dbString = result.rows[0].password;
-                var salt = dbSrting.split('$')[2];
+                var salt = dbString.split('$')[2];
                 var hashedPassword = hash(password, salt);
                 if(hashedPassword === dbString){
                     res.send('login succesfull');
