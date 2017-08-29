@@ -25,7 +25,7 @@ function hash(input, salt){
 
 
 app.get('/hash/:input', function (req,res){
-    var hashedString= hash(res.params.input,'revanthr47');
+    var hashedString= hash(req.params.input,'revanthr47');
     res.send(hashedString);
 });
 
