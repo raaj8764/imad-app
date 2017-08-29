@@ -97,7 +97,7 @@ app.get('/check-login', function(req,res){
 
 app.get('/logout', function(req,res){
     delete req.session.auth;
-    alert('you are logged out');
+    res.send('you are logged out');
 });
 
 function createTemplate (data){
