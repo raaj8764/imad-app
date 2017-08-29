@@ -95,6 +95,11 @@ app.get('/check-login', function(req,res){
     }
 });
 
+app.get('/logout', function(req,res){
+    delete req.session.auth;
+    alert('you are logged out');
+});
+
 function createTemplate (data){
     var title=data.title;
     var heading=data.heading;
