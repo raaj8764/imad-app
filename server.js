@@ -65,10 +65,10 @@ app.post('/login',function(req,res){
             }else{
                 //match the password
                 
-                var dbString =result.rows[0].password;
-                var salt =dbSrting.split($)[2];
-                var hashedPassword =hash(password, salt);
-                if(hashedPassword===dbString){
+                var dbString = result.rows[0].password;
+                var salt = dbSrting.split('$')[2];
+                var hashedPassword = hash(password, salt);
+                if(hashedPassword === dbString){
                     res.send('login succesfull');
                     }else{
                     res.send(403).send('username/password incorrect');
