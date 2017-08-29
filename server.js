@@ -2,6 +2,7 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 var Pool =require('pg').Pool;
+var crypto = require('crypto');
 var config ={
     host:"db.imad.hasura-app.io",
     user:"revanthr47",
@@ -17,40 +18,16 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
+function hash(input){
+    var hashed=crypto.pbkdf2Sync('input', 'salt', 100000, 512, 'sha512');
+    return hashed.toString('hex');
+}
 
 
-var Article={
-'article-one':{
-    title:'Article-One | Revanth Rajendran',
-    heading:'Article-one',
-    date: '10-Aug-17',
-    content:`	<p>
-        					This is the content for my first article. 
-        		</p>
-        	 <input type="text" id="name" placeholder="comment"></input>
-          <input type="submit" value="submit" id="submit_btn"></input>
-`},
-'article-two':{
-    title:'Article-Two | Revanth Rajendran',
-    heading:'Article-Two',
-    date: '10-Aug-17',
-    content:`	<p>
-        					This is the content for my second article. 
-        		</p>
-        			 <input type="text" id="name" placeholder="comment"></input>
-          <input type="submit" value="submit" id="submit_btn"></input>
-`},
-'article-three':{
-    title:'Article-Three | Revanth Rajendran',
-    heading:'Article-Three',
-    date: '20-Aug-17',
-    content:`	<p>
-        					This is the content for my third article. 
-        		</p>
-        			 <input type="text" id="name" placeholder="comment"></input>
-          <input type="submit" value="submit" id="submit_btn"></input>
-`},
-};
+app.get('/hash/:input', function (req,res){
+    var hashedString= hash(res.params.input,'revanthr47');
+    res.send(hashedString);
+});
 
 function createTemplate (data){
     var title=data.title;
