@@ -52,7 +52,7 @@ var Article={
 `},
 };
 
-function createHtml(data){
+function createTemplate (data){
     var title=data.title;
     var heading=data.heading;
     var date=data.date;
