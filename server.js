@@ -102,6 +102,10 @@ app.get('/logout', function(req,res){
     res.send('you are logged out');
 });
 
+app.get('/get-article',function(req,res){
+    
+});
+
 function createTemplate (data){
     var title=data.title;
     var heading=data.heading;
