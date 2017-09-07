@@ -103,7 +103,13 @@ app.get('/logout', function(req,res){
 });
 
 app.get('/get-article',function(req,res){
-    
+   pool.query("SELECT * FROM article WHERE id = 1",function (err,result){
+    if(err){
+        res.status(500).send(err.toString());    
+    }else{
+        res.send(JSON.stringify(result.rows[0]));
+    }
+});
 });
 
 function createTemplate (data){
