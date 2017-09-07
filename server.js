@@ -107,7 +107,7 @@ app.get('/get-article',function(req,res){
     if(err){
         res.status(500).send(err.toString());    
     }else{
-        res.send(JSON.stringify(result.rows[0]));
+        res.send(createTemplate(result.rows[0]));
     }
 });
 });
