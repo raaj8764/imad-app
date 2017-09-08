@@ -14,7 +14,11 @@ submit.onclick = function (){
         }
     }
 };
-
+var cmt= document.getElementById('cmt');
+var sub_cmt = document.getElementById('sub_btn');
+sub_cmt.onclick = function (){
+    console.log(cmt);
+};
 var username = document.getElementById('username').value;
 var password = document.getElementById('password').value;
 console.log(username);
