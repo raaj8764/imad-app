@@ -149,10 +149,8 @@ function createTemplate (data){
                         		        	<button id="sub_btn" name="submit">submit</button>
                         			       
                         			        </div>
-                        			</div>
-                        			
-                        			
-                        			</div>
+                        		 <script type="text/javascript" src="/ui/main.js">
+                                    </script>
                     </body>
                     </html>
                     `;
