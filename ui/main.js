@@ -14,12 +14,7 @@ submit.onclick = function (){
         }
     }
 };
-var cmt= document.getElementById('cmt').value;
-var sub_cmt = document.getElementById('sub_btn');
-sub_cmt.onclick = function (){
-    alert('button clicked');
-    console.log(cmt);
-};
+
 var username = document.getElementById('username').value;
 var password = document.getElementById('password').value;
 console.log(username);
