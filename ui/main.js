@@ -14,7 +14,7 @@ submit.onclick = function (){
         }
     }
 };
-var cmt= document.getElementById('cmt');
+var cmt= document.getElementById('cmt').value;
 var sub_cmt = document.getElementById('sub_btn');
 sub_cmt.onclick = function (){
     console.log(cmt);
