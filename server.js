@@ -148,9 +148,7 @@ function createTemplate (data){
                         		        	<input class="et" type="text" id="editText" placeholder="comment"/> 
                         		        	<button id="sub_btn" name="submit">submit</button>
                         			       
-                        			        </div>
-                        		 <script type="text/javascript" src="/ui/main.js">
-                                    </script>
+                        			     
                     </body>
                     </html>
                     `;
