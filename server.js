@@ -145,7 +145,7 @@ function createTemplate (data){
                             		    	${content}
                             		    	</div><hr/>
                             		    	<div >
-                        		        	<input class="et" type="text" id="editText" placeholder="comment"/><br>
+                        		        	<input class="et" type="text" id="editText" placeholder="comment"/>
                         			        <button id="sub_btn" name="submit">submit</button>
                         			        </div>
                         			</div>
