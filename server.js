@@ -121,7 +121,7 @@ function createTemplate (data){
     var HtmlTemplate=`
                     <html>
                     <head>
-                    	<title>
+                	<title>
                     	    ${title}
                     	</title>
                     	<meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -144,6 +144,11 @@ function createTemplate (data){
                                 			<div>
                             		    	${content}
                             		    	</div>
+                        			</div>
+                        			<div class="et">
+                        			<input type="text" id="editText" placeholder="comment"/><br>
+                        			<button id="sub_btn" name="submit">submit</button>
+                        			<button 
                         			</div>
                     </body>
                     </html>
